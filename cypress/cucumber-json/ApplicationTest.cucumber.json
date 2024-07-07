@@ -1,0 +1,83 @@
+[
+  {
+    "description": "  I want to use this feature file to test Parabank Application Login and Registration Features",
+    "keyword": "Feature",
+    "name": "Parabank Application Login and Registration Feature",
+    "line": 20,
+    "id": "parabank-application-login-and-registration-feature",
+    "tags": [],
+    "uri": "ApplicationTest.feature",
+    "elements": [
+      {
+        "id": "parabank-application-login-and-registration-feature;verify-application-logo-and-caption",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Verify application logo and caption",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "Launch the application",
+            "result": {
+              "status": "passed",
+              "duration": 3379000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "Verify application logo is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "Verify application caption is displayed as \"Experience the difference\"",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "parabank-application-login-and-registration-feature;verify-application-home-page-left-menu",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Verify application home page left menu",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "Launch the application",
+            "result": {
+              "status": "passed",
+              "duration": 2716000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "Verify application home page left menu",
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

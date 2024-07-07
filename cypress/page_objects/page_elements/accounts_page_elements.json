@@ -1,0 +1,4 @@
+{
+    "welcome_msg":"//h2[text()='Account Services']",
+    "logout_link":"//a[text()='Log Out']"
+}

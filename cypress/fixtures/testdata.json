@@ -1,0 +1,39 @@
+[
+    {
+        "testname": "Verify Application Logo and Caption",
+        "data": {
+            "caption": "Experience the difference"
+        }
+    },
+    {
+        "testname": "new user registration",
+        "data": {
+            "header":"Signing up is easy!",
+            "firstname": "Bharath",
+            "lastname": "Reddy",
+            "address": "Hitechcity",
+            "city": "Hyderabad",
+            "state": "TG",
+            "zipcode": "500081",
+            "phone": "9999988888",
+            "ssn": "677899990",
+            "username": "bharath2",
+            "password": "bharath123"
+        }
+    },
+    {
+        "testname": "Verify application login",
+        "data": [
+            {
+                "header": "Customer Login",
+                "username": "bharath2",
+                "password": "bharath123"
+            },
+            {
+                "header": "Customer Login",
+                "username": "admin",
+                "password": "admin123"
+            }
+        ]
+    }
+]

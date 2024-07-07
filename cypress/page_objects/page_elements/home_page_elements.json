@@ -1,0 +1,20 @@
+{
+    "logo_img":"//img[@class='logo']",
+    "caption_lbl":"//p[@class='caption']",
+
+    "solutions_link":"//li[@class='Solutions']",
+    "aboutUs_link":"//ul[@class='leftmenu']//a[text()='About Us']",
+    "services_link":"//ul[@class='leftmenu']//a[text()='Services']",
+    "products_link":"//ul[@class='leftmenu']//a[text()='Products']",
+    "locations_link":"//ul[@class='leftmenu']//a[text()='Locations']",
+    "admin_page_link":"//ul[@class='leftmenu']//a[text()='Admin Page']",
+    
+    "login_header_lbl":"//h2",
+    "username_txtb":"//input[@name='username']",
+    "password_txtb":"//input[@name='password']",
+    "login_btn":"//input[@value='Log In']",
+    "forgot_password_link":"//a[text()='Forgot login info?']",
+    "register_link":"//a[text()='Register']",
+
+    "login_error_msg":"//p[@class='error']"
+}

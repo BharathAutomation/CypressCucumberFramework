@@ -1,0 +1,15 @@
+{
+    "registration_page_header":"//h1[@class='title']",
+    "first_name_txtb":"//input[@name='customer.firstName']",
+    "last_name_txtb":"//input[@name='customer.lastName']",
+    "address_txtb":"//input[@name='customer.address.street']",
+    "city_txtb":"//input[@name='customer.address.city']",
+    "state_txtb":"//input[@name='customer.address.state']",
+    "zip_txtb":"//input[@name='customer.address.zipCode']",
+    "phone_txtb":"//input[@name='customer.phoneNumber']",
+    "ssn_txtb":"//input[@name='customer.ssn']",
+    "username_txtb":"//input[@name='customer.username']",
+    "password_txtb":"//input[@name='customer.password']",
+    "confirm_pass_txtb":"//input[@name='repeatedPassword']",
+    "register_btn":"//input[@value='Register']"
+}
