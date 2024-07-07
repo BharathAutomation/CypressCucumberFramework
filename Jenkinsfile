@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://dev.azure.com/CTS-Edison/CorporateTrust/_git/Cashlog-Automation'
+                git 'https://github.com/BharathAutomation/CypressCucumberFramework'
             }
         }
 
