@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/BharathAutomation/CypressCucumberFramework'
+                checkout scm
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                nodejs(NODE_VERSION) {
+                nodejs(nodeJSInstallationName: 'NodeJS 20.11.1', configId: 'your-nodejs-installation-id') {
                     sh 'npm install'
                 }
             }
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Cypress Tests') {
             steps {
-                nodejs(NODE_VERSION) {
+                nodejs(nodeJSInstallationName: 'NodeJS 20.11.1', configId: 'your-nodejs-installation-id') {
                     sh 'npm run run-tests'
                 }
             }
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Generate HTML Report') {
             steps {
-                nodejs(NODE_VERSION) {
+                nodejs(nodeJSInstallationName: 'NodeJS 20.11.1', configId: 'your-nodejs-installation-id') {
                     sh 'npm run generate-multi-cucumber-html-report'
                 }
             }
