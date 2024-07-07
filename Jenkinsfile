@@ -2,59 +2,41 @@ pipeline {
     agent any
 
     environment {
-        // Set up environment variables
         NODE_VERSION = '20.11.1' // Adjust according to your Node version
         CYPRESS_CACHE_FOLDER = "${WORKSPACE}/.cache/Cypress"
     }
 
     stages {
-        stage('Install Node.js') {
-            steps {
-                // Use NodeJS plugin to install Node.js
-                nodejs(NODE_VERSION) {
-                    script {
-                        echo "Node.js version: ${sh(script: 'node -v', returnStdout: true).trim()}"
-                        echo "npm version: ${sh(script: 'npm -v', returnStdout: true).trim()}"
-                    }
-                }
-            }
-        }
-
         stage('Checkout') {
             steps {
                 // Checkout code from your repository
-                git 'https://CTS-Edison@dev.azure.com/CTS-Edison/CorporateTrust/_git/Cashlog-Automation'
+                git 'https://dev.azure.com/CTS-Edison/CorporateTrust/_git/Cashlog-Automation'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                script {
-                    nodejs(NODE_VERSION) {
-                        sh 'npm install'
-                    }
+                // Install Node.js and npm dependencies
+                nodejs(NODE_VERSION) {
+                    sh 'npm install'
                 }
             }
         }
 
         stage('Run Cypress Tests') {
             steps {
-                script {
-                    nodejs(NODE_VERSION) {
-                        // Run Cypress tests using the 'run-tests' script
-                        sh 'npm run run-tests'
-                    }
+                // Run Cypress tests
+                nodejs(NODE_VERSION) {
+                    sh 'npm run run-tests'
                 }
             }
         }
 
         stage('Generate HTML Report') {
             steps {
-                script {
-                    nodejs(NODE_VERSION) {
-                        // Generate HTML report using the 'generate-multi-cucumber-html-report' script
-                        sh 'npm run generate-multi-cucumber-html-report'
-                    }
+                // Generate HTML report
+                nodejs(NODE_VERSION) {
+                    sh 'npm run generate-multi-cucumber-html-report'
                 }
             }
         }
